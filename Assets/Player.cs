@@ -2,22 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour
+{
 
-    private float moveSpeed;
+    public float moveSpeed;
     // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        PlayerMovement();
+    }
 
     void PlayerMovement()
     {
-               if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
             transform.position -= Vector3.right * Time.deltaTime * moveSpeed;
         }
@@ -26,4 +29,12 @@ public class Player : MonoBehaviour {
             transform.position += Vector3.right * Time.deltaTime * moveSpeed;
         }
     }
+
+    //void PlayerJump()
+    //{
+    //    if (Input.GetKey(KeyCode.Space))
+    //    {
+    //        transform.position;
+    //    }
+    //}
 }
