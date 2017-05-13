@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour {
     public float jumpForce;
     public LayerMask targetGround;
     Transform groundCheck;
-    bool isGrounded = false;
+    public bool isGrounded = false;
     // Use this for initialization
     void Start ()
     {
@@ -75,5 +75,6 @@ public class PlayerMovement : MonoBehaviour {
         {
             isGrounded = false;
         }
+        
     }
 }
