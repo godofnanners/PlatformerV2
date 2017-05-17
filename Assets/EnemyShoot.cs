@@ -20,9 +20,9 @@ public class EnemyShoot : MonoBehaviour {
     {
         cooldown = 1;
         timer = cooldown;
-        enemy = this.GetComponent<Enemy>();
+        enemy = GetComponentInParent<Enemy>();
         facingRight = enemy.facingRight;
-        frontPoint = transform.FindChild("FirePoint");
+        frontPoint = transform.parent.FindChild("FirePoint");
     }
 	
 	// Update is called once per frame
@@ -37,7 +37,7 @@ public class EnemyShoot : MonoBehaviour {
         {
             timer -= Time.deltaTime;
             RaycastHit2D hit = Physics2D.Raycast(frontPoint.position, target.transform.position - frontPoint.position, range, whatToHit);
-            Debug.DrawLine(transform.position, (frontPoint.transform.position - frontPoint.position) * 100, Color.yellow);
+            //Debug.DrawLine(transform.position, (frontPoint.transform.position - frontPoint.position) * 100, Color.yellow);
             if (hit.transform.tag == "Player" && timer <= 0)
             {
                 //Debug.DrawLine(transform.position, hit.point, Color.red);

@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour {
     public LayerMask targetGround;
     Transform groundCheck;
     public bool isGrounded = false;
+    public bool facingRight = true;
     // Use this for initialization
     void Start ()
     {
@@ -21,17 +22,24 @@ public class PlayerMovement : MonoBehaviour {
 	void Update ()
     {
         CheckGrounded();
+        //Jump();
+        //Move();
+        //rigidB.velocity = Vector2.right * acceleration * Time.deltaTime;
+        
+    }
+    void FixedUpdate()
+    {
         Jump();
         Move();
-        rigidB.velocity = Vector2.right * acceleration * Time.deltaTime;
-        
+        rigidB.velocity = new Vector2(acceleration * Time.deltaTime, rigidB.velocity.y);
     }
 
     public void Move()
     {
         if (Input.GetKey(KeyCode.A))
         {
-            if (acceleration > -100)
+            facingRight = false;
+            if (acceleration > -150)
             {
                 acceleration -= 20;
             }
@@ -40,7 +48,8 @@ public class PlayerMovement : MonoBehaviour {
         }
         if (Input.GetKey(KeyCode.D))
         {
-            if (acceleration < 100)
+            facingRight = true;
+            if (acceleration < 150)
             {
                 acceleration += 20;
             }           

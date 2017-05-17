@@ -59,8 +59,8 @@ public class Enemy : MonoBehaviour {
         {
             dir = new Vector2(-0.5f, -0.5f);
         }
-        RaycastHit2D chk = Physics2D.Raycast(frontPointPos, dir, 0.25f, targetGround);
-        if (chk.collider == null)
+        RaycastHit2D chk = Physics2D.Raycast(frontPointPos, dir, 0.27f, targetGround);
+        if (chk.collider == null || chk.collider.tag == "Enemy")
         {
             Flip();
             
@@ -75,11 +75,11 @@ public class Enemy : MonoBehaviour {
     {
         if (facingRight)
         {
-            rigidB.velocity = speed * Vector2.right;
+            rigidB.velocity = new Vector2(speed, rigidB.velocity.y);
         }
         else
         {
-            rigidB.velocity = speed * Vector2.left;
+            rigidB.velocity = new Vector2(speed * -1, rigidB.velocity.y);
         }
     }
 }
