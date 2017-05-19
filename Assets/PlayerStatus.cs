@@ -6,6 +6,7 @@ public class PlayerStatus : MonoBehaviour
 {
     public float health = 25;
     public float currentStamina, maxStamina = 50;
+    public float currentMana, maxMana = 50;
     public bool running;
 
     // Use this for initialization
@@ -25,9 +26,13 @@ public class PlayerStatus : MonoBehaviour
         {
             currentStamina -= 1;
         }
-        if (!running && currentStamina <= maxStamina)
+        if (!running && currentStamina < maxStamina)
         {
             currentStamina += 1;
+        }
+        if (currentMana < maxMana)
+        {
+            currentMana += 1;
         }
     }
     public void Damage(float damage)

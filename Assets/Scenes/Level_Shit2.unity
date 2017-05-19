@@ -108,6 +108,28 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &7770031 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1562897785238002, guid: 84bd3f4ab2a0ba846ac3e741877560ef,
+    type: 2}
+  m_PrefabInternal: {fileID: 1640729416}
+--- !u!114 &7770032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 7770031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626d0216b605fd14483479cc9688ba49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectpos: {fileID: 7770037}
+--- !u!4 &7770037 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4578657040325530, guid: 84bd3f4ab2a0ba846ac3e741877560ef,
+    type: 2}
+  m_PrefabInternal: {fileID: 1640729416}
 --- !u!1001 &17139573
 Prefab:
   m_ObjectHideFlags: 0
@@ -236,6 +258,28 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a2834ce8de9aec45b0a56608abb0f02, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &610888192 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1562897785238002, guid: 84bd3f4ab2a0ba846ac3e741877560ef,
+    type: 2}
+  m_PrefabInternal: {fileID: 632859976}
+--- !u!114 &610888193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 610888192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626d0216b605fd14483479cc9688ba49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectpos: {fileID: 610888198}
+--- !u!4 &610888198 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4578657040325530, guid: 84bd3f4ab2a0ba846ac3e741877560ef,
+    type: 2}
+  m_PrefabInternal: {fileID: 632859976}
 --- !u!1001 &632859976
 Prefab:
   m_ObjectHideFlags: 0
@@ -386,6 +430,18 @@ MonoBehaviour:
   bullet: {fileID: 1048324116903538, guid: 89af9f7a4d04e9745bc69736dc6f30a4, type: 2}
   timer: 0.5
   cooldown: 0.5
+--- !u!114 &1692748531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1692748529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626d0216b605fd14483479cc9688ba49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectpos: {fileID: 1692748537}
 --- !u!114 &1692748536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,3 +454,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 25
+  currentStamina: 0
+  maxStamina: 50
+  currentMana: 0
+  maxMana: 50
+  running: 0
+--- !u!4 &1692748537 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4873486320149446, guid: 0f0ddf2e2de58874d8d0ae17009ffa99,
+    type: 2}
+  m_PrefabInternal: {fileID: 733908791}
