@@ -32,7 +32,7 @@ public class Bullet : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            other.SendMessageUpwards("Damage", damage);
+            other.SendMessageUpwards("AdjustHealth", -damage);
             Destroy(gameObject);
         }
 

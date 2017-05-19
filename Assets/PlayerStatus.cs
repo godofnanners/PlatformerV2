@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStatus : MonoBehaviour
 {
-    public float health = 25;
+    public float currentHealth, maxHealth = 25;
     public float currentStamina, maxStamina = 50;
     public float currentMana, maxMana = 50;
     public bool running;
@@ -18,7 +18,7 @@ public class PlayerStatus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
+        if (currentHealth <= 0)
         {
             Destroy(gameObject);
         }
@@ -35,8 +35,8 @@ public class PlayerStatus : MonoBehaviour
             currentMana += 1;
         }
     }
-    public void Damage(float damage)
+    public void AdjustHealth(float amount)
     {
-        health -= damage;
+        currentHealth += amount;
     }
 }
