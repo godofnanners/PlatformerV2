@@ -18,18 +18,7 @@ public class BulletPlayer : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(speed * rb.velocity.x, speed * rb.velocity.y);
 	}
-	
-	// Update is called once per frame
-	void Update () 
-    {
-        timer -= Time.deltaTime;
-        if (timer <= 0)
-        {
-            Destroy(gameObject);
-            timer = cooldown;
-        }
-		
-	}
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Enemy")

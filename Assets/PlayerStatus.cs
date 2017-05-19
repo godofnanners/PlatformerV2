@@ -9,13 +9,6 @@ public class PlayerStatus : MonoBehaviour
     public float currentMana, maxMana = 50;
     public bool running;
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (currentHealth <= 0)
@@ -30,13 +23,31 @@ public class PlayerStatus : MonoBehaviour
         {
             currentStamina += 1;
         }
-        if (currentMana < maxMana)
-        {
-            currentMana += 1;
-        }
     }
+
     public void AdjustHealth(float amount)
     {
         currentHealth += amount;
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+        if (currentHealth < 0)
+        {
+            currentHealth = 0;
+        }
+    }
+
+    public void AdjustMana(float amount)
+    {
+        currentMana += amount;
+        if (currentMana > maxMana)
+        {
+            currentMana = maxMana;
+        }
+        if (currentMana < 0)
+        {
+            currentMana = 0;
+        }
     }
 }

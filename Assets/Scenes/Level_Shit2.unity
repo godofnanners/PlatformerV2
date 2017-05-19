@@ -651,12 +651,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1692748529}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34feff1c9d7c681438289547fc2c2f57, type: 3}
+  m_Script: {fileID: 11500000, guid: 561194876a79adf47b551c71eda8b7ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1048324116903538, guid: 89af9f7a4d04e9745bc69736dc6f30a4, type: 2}
-  timer: 0.5
-  cooldown: 0.5
+  projectile: {fileID: 1048324116903538, guid: 89af9f7a4d04e9745bc69736dc6f30a4, type: 2}
+  ManaCost: 5
+  Cooldown: 0.5
+  ProjectileLife: 5
 --- !u!114 &1692748531
 MonoBehaviour:
   m_ObjectHideFlags: 0
