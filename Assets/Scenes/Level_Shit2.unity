@@ -9778,9 +9778,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 561194876a79adf47b551c71eda8b7ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1048324116903538, guid: 89af9f7a4d04e9745bc69736dc6f30a4, type: 2}
-  ManaCost: 5
-  Cooldown: 0.5
+  Fireball: {fileID: 1259231771931516, guid: 61a8a276c2b7d164aaa3bc7d4fc095bd, type: 2}
+  FireballCost: 5
+  FireballCooldown: 0.5
+  Lightning: {fileID: 1335155900792480, guid: dcf638909d7962b478003f3abac5f1cb, type: 2}
+  LightningCost: 20
+  LightningCooldown: 2
 --- !u!114 &1692748531
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class CastSpells : Magic
 {
-    public GameObject projectile;
-    public float ManaCost, Cooldown;
+    public GameObject Fireball;
+    public float FireballCost, FireballCooldown;
 
-	void Update ()
+    public GameObject Lightning;
+    public float LightningCost, LightningCooldown;
+
+    void Update ()
     {
         //Lägga all gameplay skit för combat
-        if (Input.GetKey(KeyCode.F))
+        if (Input.GetKey(KeyCode.Alpha1))
         {
-            Cast(projectile, ManaCost, Cooldown);
+            Cast(Fireball, FireballCost, FireballCooldown);
+        }
+        if (Input.GetKey(KeyCode.Alpha2))
+        {
+            Cast(Lightning, LightningCost, LightningCooldown);
         }
     }
 }
