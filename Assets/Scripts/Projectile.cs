@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Spell : MonoBehaviour
+public abstract class Projectile : MonoBehaviour
 {
     public float damage, timer, projectileLife, speed;
 
@@ -13,7 +13,7 @@ public abstract class Spell : MonoBehaviour
         DestroyProjectile(gameObject);
     }
 
-    public virtual void Cast()
+    public virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(speed * rb.velocity.x, speed * rb.velocity.y);

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fireball : Spell
+public class Lightning : Projectile
 {
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -14,10 +14,6 @@ public class Fireball : Spell
         else if (other.tag == "Platform")
         {
             Destroy(gameObject);
-        }
-        else if(other.tag == "Player")
-        {
-            Cast();
         }
     }
 }
