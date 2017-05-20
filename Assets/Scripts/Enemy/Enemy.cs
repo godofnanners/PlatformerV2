@@ -1,27 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Enemy : MonoBehaviour {
-
+public class Enemy : MonoBehaviour
+{
     private Rigidbody2D rigidB;
-    //Transform enemyGraphics;
     Transform frontPoint;
     public LayerMask targetGround;
     public bool facingRight;
     public float speed;
-
     
-    // Use this for initialization
     void Start ()
     {
         rigidB = GetComponent<Rigidbody2D>();
-        //enemyGraphics = transform.FindChild("EnemyTex");
         frontPoint = transform.FindChild("FirePoint");
         facingRight = true;
-        //rigidB.velocity = Vector2.right * speed;
     }
 	
-	// Update is called once per frame
 	void Update ()
     {
         CheckAhead();
@@ -40,11 +34,6 @@ public class Enemy : MonoBehaviour {
         }
 
         transform.localScale *= -1;
-        //Vector3 theScale = enemyGraphics.localScale;
-        //theScale.x *= -1;
-        //enemyGraphics.localScale = theScale;
-
-        //rigidB.velocity = Vector2.left * speed;
     }
     public void CheckAhead()
     {
@@ -62,14 +51,12 @@ public class Enemy : MonoBehaviour {
         RaycastHit2D chk = Physics2D.Raycast(frontPointPos, dir, 0.27f, targetGround);
         if (chk.collider == null || chk.collider.tag == "Enemy")
         {
-            Flip();
-            
+            Flip();       
         }
         else
         {
             Debug.DrawLine(frontPointPos, chk.point, Color.red);           
-        }
-        
+        }    
     }
     public void Move()
     {

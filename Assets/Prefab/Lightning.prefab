@@ -102,7 +102,7 @@ MonoBehaviour:
   damage: 50
   timer: 0.2
   projectileLife: 0.2
-  speed: 50
+  speed: 75
 --- !u!212 &212953710122726458
 SpriteRenderer:
   m_ObjectHideFlags: 1
