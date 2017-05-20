@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
     void Start ()
     {
         rigidB = GetComponent<Rigidbody2D>();
-        frontPoint = transform.FindChild("FirePoint");
+        frontPoint = transform.Find("FirePoint");
         facingRight = true;
     }
 	

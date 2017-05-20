@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStatus : MonoBehaviour
 {
@@ -8,6 +9,16 @@ public class PlayerStatus : MonoBehaviour
     public float currentStamina, maxStamina = 50;
     public float currentMana, maxMana = 50;
     public bool running;
+    public Slider Healthbar;
+    public Slider Manabar;
+    public Slider Staminabar;
+
+    private void Start()
+    {
+        Healthbar.maxValue = maxHealth;
+        Manabar.maxValue = maxMana;
+        Staminabar.maxValue = maxStamina;
+    }
 
     void Update()
     {
@@ -17,12 +28,19 @@ public class PlayerStatus : MonoBehaviour
         }
         if (running)
         {
-            currentStamina -= 1;
+            currentStamina -= 5;
         }
         if (!running && currentStamina < maxStamina)
         {
             currentStamina += 1;
         }
+
+        currentMana += 0.05f;
+
+        Healthbar.value = currentHealth;
+        Manabar.value = currentMana;
+        Staminabar.value = currentStamina;
+
     }
 
     public void AdjustHealth(float amount)

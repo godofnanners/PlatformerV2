@@ -22,7 +22,7 @@ public class EnemyShoot : MonoBehaviour {
         timer = cooldown;
         enemy = GetComponentInParent<Enemy>();
         facingRight = enemy.facingRight;
-        frontPoint = transform.parent.FindChild("FirePoint");
+        frontPoint = transform.parent.Find("FirePoint");
     }
 	
 	void Update ()

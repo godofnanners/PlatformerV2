@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        groundCheck = transform.FindChild("GroundCheck");
+        groundCheck = transform.Find("GroundCheck");
         rigidB = GetComponent<Rigidbody2D>();
 
     }
