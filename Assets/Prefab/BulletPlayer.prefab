@@ -21,10 +21,10 @@ GameObject:
   - component: {fileID: 4385863359519352}
   - component: {fileID: 212278928177036798}
   - component: {fileID: 50915712575597780}
-  - component: {fileID: 114528030256076196}
   - component: {fileID: 61647044666982658}
+  - component: {fileID: 114847089667317858}
   m_Layer: 10
-  m_Name: BulletPlayer
+  m_Name: Fireball
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,7 +88,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
---- !u!114 &114528030256076196
+--- !u!114 &114847089667317858
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,14 +96,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1048324116903538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 864035280c0fd42459cc35491c14e40f, type: 3}
+  m_Script: {fileID: 11500000, guid: 85900af0bf628a94e86729a7bae022c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 50
+  timer: 5
+  projectileLife: 5
   speed: 5
-  timer: 10
-  cooldown: 10
-  rb: {fileID: 50915712575597780}
 --- !u!212 &212278928177036798
 SpriteRenderer:
   m_ObjectHideFlags: 1
