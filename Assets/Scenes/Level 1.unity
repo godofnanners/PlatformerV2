@@ -6425,7 +6425,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 436752, guid: 1a2834ce8de9aec45b0a56608abb0f02, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 37.37
+      value: 37.46
       objectReference: {fileID: 0}
     - target: {fileID: 436752, guid: 1a2834ce8de9aec45b0a56608abb0f02, type: 2}
       propertyPath: m_LocalPosition.y
@@ -6478,6 +6478,14 @@ Prefab:
     - target: {fileID: 136846, guid: 1a2834ce8de9aec45b0a56608abb0f02, type: 2}
       propertyPath: m_TagString
       value: Platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 6188290, guid: 1a2834ce8de9aec45b0a56608abb0f02, type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 144244, guid: 1a2834ce8de9aec45b0a56608abb0f02, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a2834ce8de9aec45b0a56608abb0f02, type: 2}
@@ -7844,11 +7852,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4873486320149446, guid: 0f0ddf2e2de58874d8d0ae17009ffa99, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.9
+      value: 67.97
       objectReference: {fileID: 0}
     - target: {fileID: 4873486320149446, guid: 0f0ddf2e2de58874d8d0ae17009ffa99, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.6
+      value: 9.43
       objectReference: {fileID: 0}
     - target: {fileID: 4873486320149446, guid: 0f0ddf2e2de58874d8d0ae17009ffa99, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9238,6 +9246,23 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 436752, guid: 1a2834ce8de9aec45b0a56608abb0f02, type: 2}
   m_PrefabInternal: {fileID: 789647847}
+--- !u!1 &1131229360 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 144244, guid: 1a2834ce8de9aec45b0a56608abb0f02, type: 2}
+  m_PrefabInternal: {fileID: 1143159152}
+--- !u!114 &1131229361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1131229360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a9692103d70c047a5c3022341e093d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 2
+  dirSpeed: 1
 --- !u!4 &1131569774 stripped
 Transform:
   m_PrefabParentObject: {fileID: 436752, guid: 1a2834ce8de9aec45b0a56608abb0f02, type: 2}
@@ -16077,6 +16102,68 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 436752, guid: 1a2834ce8de9aec45b0a56608abb0f02, type: 2}
   m_PrefabInternal: {fileID: 242969943}
+--- !u!1 &1936695821 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 144244, guid: 1a2834ce8de9aec45b0a56608abb0f02, type: 2}
+  m_PrefabInternal: {fileID: 818712691}
+--- !u!114 &1936695822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1936695821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a9692103d70c047a5c3022341e093d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 4
+  dirSpeed: 2
+--- !u!234 &1936695823
+SliderJoint2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1936695821}
+  m_Enabled: 0
+  serializedVersion: 4
+  m_EnableCollision: 1
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 76.75198, y: 2.4142573}
+  m_AutoConfigureAngle: 1
+  m_Angle: -90.15194
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_TranslationLimits:
+    m_LowerTranslation: 0
+    m_UpperTranslation: 0
+--- !u!50 &1936695824
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1936695821}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1937204713
 Prefab:
   m_ObjectHideFlags: 0
