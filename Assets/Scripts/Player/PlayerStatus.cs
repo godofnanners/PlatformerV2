@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerStatus : MonoBehaviour
 {
@@ -24,7 +26,7 @@ public class PlayerStatus : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene("Level 1");
         }
         if (running)
         {

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Victory : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class Victory : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            //victoryscreen
+            SceneManager.LoadScene("Level 1");
         }
     }
 }
