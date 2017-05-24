@@ -4,8 +4,8 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rigidB;
-    public float acceleration;
-    public float maxSpeed;
+    float acceleration;
+    float maxSpeed = 250;
     public float jumpForce;
     public LayerMask targetGround;
     Transform groundCheck;
@@ -28,7 +28,6 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         Jump();
-        Sprint();
         Move();
         rigidB.velocity = new Vector2(acceleration * Time.deltaTime, rigidB.velocity.y);
     }
@@ -64,20 +63,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rigidB.AddForce(new Vector2(0, jumpForce));
             isGrounded = false;
-        }
-    }
-
-    public void Sprint()
-    {
-        if (Input.GetButton("Sprint") && GetComponent<PlayerStatus>().currentStamina >= 1 && isGrounded)
-        {
-            GetComponent<PlayerStatus>().running = true;
-            maxSpeed = 350;
-        }
-        else
-        {
-            GetComponent<PlayerStatus>().running = false;
-            maxSpeed = 150;
         }
     }
 

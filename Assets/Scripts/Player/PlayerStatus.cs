@@ -8,18 +8,14 @@ using UnityEngine.SceneManagement;
 public class PlayerStatus : MonoBehaviour
 {
     public float currentHealth, maxHealth = 25;
-    public float currentStamina, maxStamina = 50;
     public float currentMana, maxMana = 50;
-    public bool running;
     public Slider Healthbar;
     public Slider Manabar;
-    public Slider Staminabar;
 
     private void Start()
-    {
+    { 
         Healthbar.maxValue = maxHealth;
         Manabar.maxValue = maxMana;
-        Staminabar.maxValue = maxStamina;
     }
 
     void Update()
@@ -28,22 +24,11 @@ public class PlayerStatus : MonoBehaviour
         {
             SceneManager.LoadScene("Level 1");
         }
-        if (running)
-        {
-            currentStamina -= 0.5f;
-        }
-        if (!running && currentStamina < maxStamina)
-        {
-            currentStamina += 1;
-        }
-
         
         AdjustMana(0.05f);
 
         Healthbar.value = currentHealth;
         Manabar.value = currentMana;
-        Staminabar.value = currentStamina;
-
     }
 
     public void AdjustHealth(float amount)
