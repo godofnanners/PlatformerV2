@@ -9,7 +9,7 @@ public class Victory : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("Level 1");
+            SceneManager.LoadScene("Victoryscreen");
         }
     }
 }

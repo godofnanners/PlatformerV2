@@ -30,14 +30,15 @@ public class PlayerStatus : MonoBehaviour
         }
         if (running)
         {
-            currentStamina -= 5;
+            currentStamina -= 0.5f;
         }
         if (!running && currentStamina < maxStamina)
         {
             currentStamina += 1;
         }
 
-        currentMana += 0.05f;
+        
+        AdjustMana(0.05f);
 
         Healthbar.value = currentHealth;
         Manabar.value = currentMana;
