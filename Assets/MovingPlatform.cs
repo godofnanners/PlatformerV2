@@ -21,26 +21,6 @@ public class MovingPlatform : MonoBehaviour
     }
 
 
-    //void ConnectToPlayer(Rigidbody2D player)
-    //{
-    //    SliderJoint2D joint = GetComponent<SliderJoint2D>();
-    //    joint.connectedBody = player;
-
-    //}
-
-    //void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.collider.gameObject.tag == ("Player"))
-    //    {
-    //        Debug.Log("hbuoawd");
-
-           
-    //        ConnectToPlayer(collision.collider.GetComponent<Rigidbody2D>());
-    //    }
-
-
-    //    }
-
         void Update()
     {
 

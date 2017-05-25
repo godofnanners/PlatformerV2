@@ -12,7 +12,7 @@ public class CastSpells : Magic
 
     void Update ()
     {
-        //Lägga all gameplay skit för combat
+       
         if (Input.GetKey(KeyCode.Alpha1))
         {
             Cast(Fireball, FireballCost, FireballCooldown);
