@@ -9,7 +9,7 @@ public class Lightning : Projectile
         if (other.tag == "Enemy")
         {
             other.SendMessageUpwards("Damage", damage);
-            Destroy(gameObject);
+           
         }
         else if (other.tag == "Platform")
         {

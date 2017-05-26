@@ -19,12 +19,12 @@ public class ItemPickup : MonoBehaviour
     {
         if (health && other.GetComponent<PlayerStatus>().currentHealth < other.GetComponent<PlayerStatus>().maxHealth)
         {
-            other.GetComponent<PlayerStatus>().currentHealth += Amount;
+            other.GetComponent<PlayerStatus>().AdjustHealth(Amount);
             Destroy(gameObject);
         }
         if (mana && other.GetComponent<PlayerStatus>().currentMana < other.GetComponent<PlayerStatus>().maxMana)
         {
-            other.GetComponent<PlayerStatus>().currentMana += Amount;
+            other.GetComponent<PlayerStatus>().AdjustMana(Amount);
             Destroy(gameObject);
         }
     }

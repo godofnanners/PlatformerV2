@@ -20,12 +20,9 @@ public class PlayerStatus : MonoBehaviour
 
     void Update()
     {
-        if (currentHealth <= 0)
-        {
-            SceneManager.LoadScene("Level 1");
-        }
+       
         
-        AdjustMana(0.05f);
+        
 
         Healthbar.value = currentHealth;
         Manabar.value = currentMana;
@@ -40,7 +37,7 @@ public class PlayerStatus : MonoBehaviour
         }
         if (currentHealth < 0)
         {
-            currentHealth = 0;
+            SceneManager.LoadScene("Level 1");
         }
     }
 
