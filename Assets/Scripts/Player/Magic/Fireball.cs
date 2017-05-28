@@ -11,9 +11,9 @@ public class Fireball : Projectile
             other.SendMessageUpwards("Damage", damage);
             Destroy(gameObject);
         }
-        else if (other.tag == "Platform")
-        {
-            Destroy(gameObject);
-        }
+        //else if (other.tag == "Platform")
+        //{
+        //    Destroy(gameObject);
+        //}
     }
 }

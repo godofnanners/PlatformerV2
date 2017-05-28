@@ -11,9 +11,9 @@ public class Lightning : Projectile
             other.SendMessageUpwards("Damage", damage);
            
         }
-        else if (other.tag == "Platform")
-        {
-            Destroy(gameObject);
-        }
+        //else if (other.tag == "Platform")
+        //{
+        //    Destroy(gameObject);
+        //}
     }
 }

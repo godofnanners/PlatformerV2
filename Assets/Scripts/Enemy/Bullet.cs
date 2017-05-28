@@ -10,9 +10,9 @@ public class Bullet : Projectile
             other.SendMessageUpwards("AdjustHealth", -damage);
             Destroy(gameObject);
         }
-        else if (other.tag == "Platform")
-        {
-            Destroy(gameObject);
-        }
+        //else if (other.tag == "Platform")
+        //{
+        //    Destroy(gameObject);
+        //}
     }
 }
